@@ -18,6 +18,7 @@ class TournamentPlayer:
     player_username:str
     paid: bool
 
+    email:str | None
     team_id:str | None = None
     player_universal_id:str | None = None
 
@@ -82,8 +83,10 @@ class Match:
 @dataclass
 class Tournament:
     tournament_id: str
+    tournament_admin_id: str
+    tournament_admin_email:str
     tournament_title:str
-    tournament_description:str
+    tournament_description:str | None
     tournament_status: Literal[TournamentStatus.UPCOMING, TournamentStatus.ONGOING, TournamentStatus.CLOSING, TournamentStatus.COMPLETED] = "upcoming",
     root_admin: TournamentPlayer
 
