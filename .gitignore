@@ -1,6 +1,7 @@
 venv
 __pycache__
 secrets
+.DS_Store
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
